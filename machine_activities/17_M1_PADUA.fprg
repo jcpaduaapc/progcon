@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rams"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-11-12 09:15:49 AM"/>
+        <attribute name="created" value="UmFtcztERVNLVE9QLU0wTlJHNjY7MjAxOS0xMC0yOTswOTozODoyOSBBTTsyNzM0"/>
+        <attribute name="edited" value="UmFtcztERVNLVE9QLU0wTlJHNjY7MjAxOS0xMC0yOTsxMDoyMToxOCBBTTsyOzI4MjU="/>
+        <attribute name="edited" value="UmFtcztMQUIzMTRDMTg7MjAxOS0xMS0xMjswOToxNTo0OSBBTTsxOzIzMTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Hi let me help you add numbers :)&quot;" newline="True"/>
+            <output expression="&quot;Please declare your digits&quot;" newline="True"/>
+            <declare name="NumberOne" type="Integer" array="False" size=""/>
+            <declare name="NumberTwo" type="Integer" array="False" size=""/>
+            <declare name="Answer" type="Integer" array="False" size=""/>
+            <input variable="NumberOne"/>
+            <output expression="&quot;Nice! Let me have the second one&quot;" newline="True"/>
+            <input variable="NumberTwo"/>
+            <assign variable="Answer" expression="NumberOne + NumberTwo"/>
+            <output expression="&quot;The answer is &quot; &amp;  Answer" newline="True"/>
+            <output expression="&quot;Do you want to start again?&quot;" newline="True"/>
+            <declare name="decide" type="String" array="False" size=""/>
+            <input variable="decide"/>
+            <if expression="decide=&quot;yes&quot;">
+                <then>
+                    <call expression="Main"/>
+                </then>
+                <else>
+                    <output expression="&quot;Nice working with you&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
