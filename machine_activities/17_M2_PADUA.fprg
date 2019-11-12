@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rams"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-11-05 10:54:54 AM"/>
+        <attribute name="created" value="UmFtcztERVNLVE9QLU0wTlJHNjY7MjAxOS0xMC0yOTsxMDowMDoyOSBBTTsyNzE1"/>
+        <attribute name="edited" value="UmFtcztERVNLVE9QLU0wTlJHNjY7MjAxOS0xMS0wNTsxMDo1NDo1NCBBTTsyOzI4MjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="radius" type="Integer" array="False" size=""/>
+            <declare name="diameter" type="Integer" array="False" size=""/>
+            <declare name="AreaOfACircle" type="Integer" array="False" size=""/>
+            <declare name="decision" type="String" array="False" size=""/>
+            <declare name="name" type="String" array="False" size=""/>
+            <output expression="&quot;Welcome, I would like to help you solve the Area of the Circle&quot;" newline="True"/>
+            <output expression="&quot;May I know your name?&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;NICE &quot; &amp; name &amp; &quot; Let's start! &quot;" newline="True"/>
+            <output expression="&quot;Which do you prefer to use? diameter or radius?&quot;" newline="True"/>
+            <input variable="decision"/>
+            <if expression="decision==&quot;radius&quot;">
+                <then>
+                    <output expression="&quot;Declare radius&quot;" newline="True"/>
+                    <input variable="radius"/>
+                    <assign variable="AreaOfACircle" expression="3.14*(radius*radius)"/>
+                    <output expression="&quot;The Area of the Circle is &quot; &amp; AreaOfACircle" newline="True"/>
+                    <output expression="&quot;Did you have another one?&quot;" newline="True"/>
+                    <declare name="decision2" type="String" array="False" size=""/>
+                    <input variable="decision2"/>
+                    <if expression="decision2==&quot;yes&quot;">
+                        <then>
+                            <output expression="&quot;OKAY:)&quot;" newline="True"/>
+                            <call expression="Main "/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Thanks! Nice working with you &quot; &amp; name &amp; &quot;:)&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="decision==&quot;diameter&quot;">
+                        <then>
+                            <output expression="&quot;Declare diameter&quot;" newline="True"/>
+                            <input variable="diameter"/>
+                            <assign variable="AreaOfACircle" expression="3.14*(diameter/2)^2"/>
+                            <output expression="&quot;The Area of the Circle is &quot; &amp; AreaOfACircle" newline="True"/>
+                        </then>
+                        <else>
+                            <breakpoint/>
+                        </else>
+                    </if>
+                    <output expression="&quot;Did you have another one?&quot;" newline="True"/>
+                    <declare name="decision2" type="String" array="False" size=""/>
+                    <input variable="decision2"/>
+                    <if expression="decision2==&quot;yes&quot;">
+                        <then>
+                            <output expression="&quot;OKAY:)&quot;" newline="True"/>
+                            <call expression="Main"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Thanks! Nice working with you &quot; &amp; name &amp; &quot;:)&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
