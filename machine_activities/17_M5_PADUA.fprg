@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rams"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-12-04 01:42:55 AM"/>
+        <attribute name="created" value="UmFtcztMQUIzMTRDMTM7MjAxOS0xMi0wNDswMTowNToyMyBBTTsyMTg4"/>
+        <attribute name="edited" value="UmFtcztMQUIzMTRDMTM7MjAxOS0xMi0wNDswMTo0Mjo1NSBBTTsxOzIzMDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Please insert numbers and I'll help you determine which is the least.&quot;" newline="True"/>
+            <declare name="num1" type="Real" array="False" size=""/>
+            <declare name="num2" type="Real" array="False" size=""/>
+            <declare name="num3" type="Real" array="False" size=""/>
+            <output expression="&quot;Insert first number&quot;" newline="True"/>
+            <input variable="num1"/>
+            <output expression="&quot;Insert second number&quot;" newline="True"/>
+            <input variable="num2"/>
+            <output expression="&quot;Insert third number&quot;" newline="True"/>
+            <input variable="num3"/>
+            <if expression="num1&lt; num2">
+                <then>
+                    <if expression="num1&lt;num3">
+                        <then>
+                            <output expression="num1 &amp; &quot; is the least number.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="num3 &amp; &quot; is the least number.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="num2&lt;num3">
+                        <then>
+                            <output expression="num2 &amp; &quot; is the least number.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="num3 &amp; &quot; is the least number.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Would you try again? :)&quot;" newline="True"/>
+            <declare name="decide1" type="String" array="False" size=""/>
+            <output expression="&quot;yes or no?&quot;" newline="True"/>
+            <input variable="decide1"/>
+            <if expression="decide1 = &quot;yes&quot;">
+                <then>
+                    <call expression="Main"/>
+                </then>
+                <else>
+                    <output expression="&quot;Nice working with you.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
