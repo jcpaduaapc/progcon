@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rams"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-11-30 02:16:39 AM"/>
+        <attribute name="created" value="UmFtcztMQUIzMTRDMTM7MjAxOS0xMS0zMDswMTo0NjoxMyBBTTsyMTkw"/>
+        <attribute name="edited" value="UmFtcztMQUIzMTRDMTM7MjAxOS0xMS0zMDswMjoxNjozOSBBTTsxOzIzMDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Please state your score&quot;" newline="True"/>
+            <declare name="rawScore" type="Integer" array="False" size=""/>
+            <input variable="rawScore"/>
+            <if expression="rawScore&gt;=95">
+                <then>
+                    <output expression="&quot;Your grade equivalent is 4&quot;" newline="True"/>
+                    <output expression="&quot;Do you want another try?&quot;" newline="True"/>
+                    <declare name="decide1" type="String" array="False" size=""/>
+                    <input variable="decide1"/>
+                    <if expression="decide1=&quot;yes&quot;">
+                        <then>
+                            <call expression="Main"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Nice working with you :)&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="rawScore&gt;=91">
+                        <then>
+                            <output expression="&quot;Your grade equivalent is 3.5&quot;" newline="True"/>
+                            <output expression="&quot;Do you want another try?&quot;" newline="True"/>
+                            <declare name="decide1" type="String" array="False" size=""/>
+                            <input variable="decide1"/>
+                            <if expression="decide1=&quot;yes&quot;">
+                                <then>
+                                    <call expression="Main"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Nice working with you :)&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="rawScore&gt;=87">
+                                <then>
+                                    <output expression="&quot;Your grade equivalent is 3&quot;" newline="True"/>
+                                    <output expression="&quot;Do you want another try?&quot;" newline="True"/>
+                                    <declare name="decide1" type="String" array="False" size=""/>
+                                    <input variable="decide1"/>
+                                    <if expression="decide1=&quot;yes&quot;">
+                                        <then>
+                                            <call expression="Main"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Nice working with you :)&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="rawScore&gt;=83">
+                                        <then>
+                                            <output expression="&quot;Your grade equivalent is 2.5&quot;" newline="True"/>
+                                            <output expression="&quot;Do you want another try?&quot;" newline="True"/>
+                                            <declare name="decide1" type="String" array="False" size=""/>
+                                            <input variable="decide1"/>
+                                            <if expression="decide1=&quot;yes&quot;">
+                                                <then>
+                                                    <call expression="Main"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Nice working with you :)&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <if expression="rawScore&gt;=79">
+                                                <then>
+                                                    <output expression="&quot;Your grade equivalent is 2&quot;" newline="True"/>
+                                                    <output expression="&quot;Do you want another try?&quot;" newline="True"/>
+                                                    <declare name="decide1" type="String" array="False" size=""/>
+                                                    <input variable="decide1"/>
+                                                    <if expression="decide1=&quot;yes&quot;">
+                                                        <then>
+                                                            <call expression="Main"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;Nice working with you :)&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <if expression="rawScore&gt;=75">
+                                                        <then>
+                                                            <output expression="&quot;Your grade equivalent is 1.5&quot;" newline="True"/>
+                                                            <output expression="&quot;Do you want another try?&quot;" newline="True"/>
+                                                            <declare name="decide1" type="String" array="False" size=""/>
+                                                            <input variable="decide1"/>
+                                                            <if expression="decide1=&quot;yes&quot;">
+                                                                <then>
+                                                                    <call expression="Main"/>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="&quot;Nice working with you :)&quot;" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="rawScore&gt;=70">
+                                                                <then>
+                                                                    <output expression="&quot;Your grade equivalent is 1&quot;" newline="True"/>
+                                                                    <output expression="&quot;Do you want another try?&quot;" newline="True"/>
+                                                                    <declare name="decide1" type="String" array="False" size=""/>
+                                                                    <input variable="decide1"/>
+                                                                    <if expression="decide1=&quot;yes&quot;">
+                                                                        <then>
+                                                                            <call expression="Main"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <output expression="&quot;Nice working with you :)&quot;" newline="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="&quot;Your grade equivalent is R&quot;" newline="True"/>
+                                                                    <output expression="&quot;Do you want another try?&quot;" newline="True"/>
+                                                                    <declare name="decide1" type="String" array="False" size=""/>
+                                                                    <input variable="decide1"/>
+                                                                    <if expression="decide1=&quot;yes&quot;">
+                                                                        <then>
+                                                                            <call expression="Main"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <output expression="&quot;Nice working with you :)&quot;" newline="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
