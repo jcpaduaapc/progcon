@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Name"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-23 09:32:51 PM"/>
+        <attribute name="created" value="TmFtZTtMQVBUT1AtUjI2SDhQRk47MjAyMC0wMS0wNTsxMDoxMjo0NyBQTTsyNzA1"/>
+        <attribute name="edited" value="TmFtZTtMQVBUT1AtUjI2SDhQRk47MjAyMC0wMS0wNjswMTo0ODowMyBQTTs2O05hbWU7TEFQVE9QLVIyNkg4UEZOOzIwMjAtMDEtMDU7MDk6NDY6MzYgUE07Rk00X0cxX1RlbXBlcmF0dXJlLmZwcmc7NzgwOA=="/>
+        <attribute name="edited" value="TmFtZTtMQVBUT1AtUjI2SDhQRk47MjAyMC0wMS0yMzswOTozMjo1MSBQTTszOzI4MjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Celsius to Fahrenheit Converter&quot;" newline="True"/>
+            <declare name="ExitCode" type="Boolean" array="False" size=""/>
+            <assign variable="ExitCode" expression="True"/>
+            <declare name="Again" type="String" array="False" size=""/>
+            <while expression="ExitCode == True">
+                <output expression="&quot;Input temperature in Celcius (&#176;C)&quot;" newline="True"/>
+                <declare name="celcius" type="Real" array="False" size=""/>
+                <input variable="celcius"/>
+                <declare name="Farenheight" type="Real" array="False" size=""/>
+                <assign variable="Farenheight" expression="(celcius*9/5)+32"/>
+                <output expression="Farenheight &amp; &quot; &#176;F&quot;" newline="True"/>
+                <output expression="&quot;Do you want to try again?&quot;" newline="True"/>
+                <input variable="Again"/>
+                <if expression="Again = &quot;Yes&quot;">
+                    <then>
+                        <assign variable="ExitCode" expression="True"/>
+                    </then>
+                    <else>
+                        <assign variable="ExitCode" expression="False"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Nice working with you :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

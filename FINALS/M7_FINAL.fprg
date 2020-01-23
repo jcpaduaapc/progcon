@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Name"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-23 09:30:42 PM"/>
+        <attribute name="created" value="TmFtZTtMQVBUT1AtUjI2SDhQRk47MjAyMC0wMS0wNjswMTo1ODoyNyBQTTsyNzE0"/>
+        <attribute name="edited" value="TmFtZTtMQVBUT1AtUjI2SDhQRk47MjAyMC0wMS0yMzswOTozMDo0MiBQTTszOzI4MTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Adding Numbers&quot;" newline="True"/>
+            <output expression="&quot;Bacarro, Gregorio, Padua&quot;" newline="True"/>
+            <declare name="Value" type="Real" array="False" size=""/>
+            <declare name="Total" type="Real" array="False" size=""/>
+            <declare name="ExitCode" type="Boolean" array="False" size=""/>
+            <assign variable="ExitCode" expression="True"/>
+            <assign variable="Total" expression="0"/>
+            <while expression="ExitCode == True">
+                <output expression="&quot;Input any number you want.&quot;" newline="True"/>
+                <output expression="&quot;Input '-999' to print output.&quot;" newline="True"/>
+                <output expression="&quot;Insert a number.&quot;" newline="True"/>
+                <input variable="Value"/>
+                <if expression="Value = -999">
+                    <then>
+                        <output expression="Total" newline="True"/>
+                        <output expression="&quot;Do you want to try again?&quot;" newline="True"/>
+                        <declare name="D" type="String" array="False" size=""/>
+                        <input variable="D"/>
+                        <if expression="D = &quot;Yes&quot;">
+                            <then/>
+                            <else>
+                                <breakpoint/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <assign variable="Total" expression="Total + Value"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

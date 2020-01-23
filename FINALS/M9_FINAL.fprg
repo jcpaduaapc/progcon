@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bryan James"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-19 12:34:06 AM"/>
+        <attribute name="created" value="QnJ5YW4gSmFtZXM7TEFQVE9QLUJDS1NNTlBTOzIwMjAtMDEtMDY7MDI6NDI6MTYgUE07MzQyNA=="/>
+        <attribute name="edited" value="QnJ5YW4gSmFtZXM7TEFQVE9QLUJDS1NNTlBTOzIwMjAtMDEtMTk7MTI6MzI6NTEgQU07MztSYW1zO0xBQjMxNEMxMjsyMDIwLTAxLTA3OzA5OjM4OjE2IEFNOzIuIEJpcnRoZGF5KDEpLmZwcmc7NzM5NA=="/>
+        <attribute name="edited" value="QnJ5YW4gSmFtZXM7TEFQVE9QLUJDS1NNTlBTOzIwMjAtMDEtMTk7MTI6MzQ6MDYgQU07MjszNTIz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Num1" type="Real" array="False" size=""/>
+            <declare name="Num2" type="Real" array="False" size=""/>
+            <declare name="Total" type="Real" array="False" size=""/>
+            <output expression="&quot;Welcome to the division calculator&quot;" newline="True"/>
+            <output expression="&quot;Input your first number&quot;" newline="True"/>
+            <input variable="Num1"/>
+            <output expression="&quot;Input your second number&quot;" newline="True"/>
+            <input variable="Num2"/>
+            <assign variable="Total" expression="Num1/Num2"/>
+            <output expression="&quot;The output is &quot; &amp; Total" newline="True"/>
+            <declare name="ExitCode" type="Boolean" array="False" size=""/>
+            <assign variable="ExitCode" expression="True"/>
+            <while expression="ExitCode == True">
+                <output expression="&quot;Do you want to start again?&quot;" newline="True"/>
+                <declare name="D" type="String" array="False" size=""/>
+                <input variable="D"/>
+                <if expression="D = &quot;Yes&quot;">
+                    <then/>
+                    <else>
+                        <breakpoint/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

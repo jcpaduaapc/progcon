@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Name"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-23 11:02:16 PM"/>
+        <attribute name="created" value="TmFtZTtMQVBUT1AtUjI2SDhQRk47MjAyMC0wMS0yMzsxMDo1NToxMiBQTTsyNzA0"/>
+        <attribute name="edited" value="TmFtZTtMQVBUT1AtUjI2SDhQRk47MjAyMC0wMS0yMzsxMDo1NjowMyBQTTsxO05hbWU7TEFQVE9QLVIyNkg4UEZOOzIwMjAtMDEtMDY7MDE6NTg6MjcgUE07Ny4gQWRkaW5nIHVudGlsIC05OTkuZnByZzs3Njc0"/>
+        <attribute name="edited" value="TmFtZTtMQVBUT1AtUjI2SDhQRk47MjAyMC0wMS0yMzsxMTowMDozMiBQTTsxNjtSYW1zO0xBQjMxNEMxMjsyMDIwLTAxLTA3OzA5OjM4OjE2IEFNOzIuIEJpcnRoZGF5KDEpLmZwcmc7NjczMQ=="/>
+        <attribute name="edited" value="TmFtZTtMQVBUT1AtUjI2SDhQRk47MjAyMC0wMS0yMzsxMTowMjoxNiBQTTsxOzI4MDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Age Computer&quot;" newline="True"/>
+            <output expression="&quot;Bacarro, Gregorio, Padua&quot;" newline="True"/>
+            <declare name="CY, BY, CM, BM, CD, BD, diff1, diff2, diff3" type="Integer" array="False" size=""/>
+            <output expression="&quot; Feel free to answer all the asked questions&quot;" newline="True"/>
+            <output expression="&quot;Current Year&quot;" newline="True"/>
+            <input variable="CY"/>
+            <output expression="&quot;Current Month&quot;" newline="True"/>
+            <input variable="CM"/>
+            <output expression="&quot;Current day&quot;" newline="True"/>
+            <input variable="CD"/>
+            <output expression="&quot;Please state your birthmonth &quot;" newline="True"/>
+            <input variable="BM"/>
+            <output expression="&quot;Please state your birthday &quot;" newline="True"/>
+            <input variable="BD"/>
+            <output expression="&quot;Finally, your birthyear.&quot;" newline="True"/>
+            <input variable="BY"/>
+            <declare name="ExitCode" type="Boolean" array="False" size=""/>
+            <assign variable="ExitCode" expression="True"/>
+            <while expression="ExitCode == True">
+                <if expression="BM &lt;13">
+                    <then>
+                        <if expression="CM&gt;12">
+                            <then>
+                                <output expression="&quot;Error! Please validate your data.&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="BD&gt;31">
+                                    <then>
+                                        <output expression="&quot;Error! Please validate your data.&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="CD&lt;32">
+                                            <then>
+                                                <assign variable="diff1" expression="CY-BY"/>
+                                                <if expression="diff1&gt;0">
+                                                    <then>
+                                                        <if expression="BM&lt;CM">
+                                                            <then>
+                                                                <output expression="&quot;You are&quot; &amp; diff1" newline="True"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="BM = CM">
+                                                                    <then>
+                                                                        <if expression="BD &gt; CD">
+                                                                            <then>
+                                                                                <assign variable="diff2" expression="diff1 - 1"/>
+                                                                                <output expression="&quot;Your age is &quot; &amp; diff2" newline="True"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <if expression="BD=CD">
+                                                                                    <then>
+                                                                                        <output expression="&quot;Your age is &quot; &amp; diff1" newline="True"/>
+                                                                                    </then>
+                                                                                    <else>
+                                                                                        <output expression="&quot;Your age is &quot; &amp; diff1" newline="True"/>
+                                                                                    </else>
+                                                                                </if>
+                                                                            </else>
+                                                                        </if>
+                                                                    </then>
+                                                                    <else>
+                                                                        <assign variable="diff3" expression="diff1 - 1"/>
+                                                                        <output expression="&quot;You are &quot; &amp; diff3" newline="True"/>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;You are not yet born!&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;Please validate your data.&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <output expression="&quot;Please validate your data.&quot;" newline="True"/>
+                    </else>
+                </if>
+                <output expression="&quot;Do you want to try again?&quot;" newline="True"/>
+                <declare name="D" type="String" array="False" size=""/>
+                <input variable="D"/>
+                <if expression="D = &quot;Yes&quot;">
+                    <then/>
+                    <else>
+                        <breakpoint/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;It's nice working with you!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

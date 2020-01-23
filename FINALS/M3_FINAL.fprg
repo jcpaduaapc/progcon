@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bryan James"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-19 12:31:28 AM"/>
+        <attribute name="created" value="QnJ5YW4gSmFtZXM7TEFQVE9QLUJDS1NNTlBTOzIwMjAtMDEtMDY7MDI6MDg6NDggUE07MzQzMQ=="/>
+        <attribute name="edited" value="QnJ5YW4gSmFtZXM7TEFQVE9QLUJDS1NNTlBTOzIwMjAtMDEtMTk7MTI6MzA6MjcgQU07MztSYW1zO0xBQjMxNEMxMjsyMDIwLTAxLTA3OzA5OjM4OjE2IEFNOzIuIEJpcnRoZGF5KDEpLmZwcmc7NzM5NQ=="/>
+        <attribute name="edited" value="QnJ5YW4gSmFtZXM7TEFQVE9QLUJDS1NNTlBTOzIwMjAtMDEtMTk7MTI6MzE6MjggQU07MzszNTI1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="F" type="Integer" array="False" size=""/>
+            <declare name="I" type="Integer" array="False" size=""/>
+            <declare name="I2" type="Integer" array="False" size=""/>
+            <declare name="Answer" type="String" array="False" size=""/>
+            <output expression="&quot;Welcome to the feet-inches converter! Click F if you want to convert into Feet while I if you want to convert into inches&quot;" newline="True"/>
+            <input variable="Answer"/>
+            <declare name="ExitCode" type="Boolean" array="False" size=""/>
+            <assign variable="ExitCode" expression="True"/>
+            <while expression="ExitCode == True">
+                <if expression="Answer == &quot;I&quot;">
+                    <then>
+                        <output expression="&quot;Input F&quot;" newline="True"/>
+                        <input variable="F"/>
+                        <output expression="&quot;Input I&quot;" newline="True"/>
+                        <input variable="I"/>
+                        <assign variable="I2" expression="F*12+I"/>
+                        <output expression="&quot;The Output is&quot; &amp; I2 &amp; &quot;Inches&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="Answer == &quot;F&quot;">
+                            <then>
+                                <output expression="&quot;Input I&quot;" newline="True"/>
+                                <input variable="I"/>
+                                <assign variable="F" expression="I/12"/>
+                                <assign variable="I2" expression="I-F*12"/>
+                                <output expression="&quot;The output is &quot; &amp; F &amp; &quot; Feet&quot; &amp; &quot; &quot; &amp; I2 &amp; &quot; Inches&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;The End&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Do you want to start again?&quot;" newline="True"/>
+                <declare name="D" type="String" array="False" size=""/>
+                <input variable="D"/>
+                <if expression="D = &quot;Yes&quot;">
+                    <then/>
+                    <else>
+                        <breakpoint/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
