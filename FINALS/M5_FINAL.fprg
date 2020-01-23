@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rams"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-23 11:35:14 PM"/>
+        <attribute name="created" value="UmFtcztMQUIzMTRDMTM7MjAxOS0xMi0wNDswMTowNToyMyBBTTsyMTg4"/>
+        <attribute name="edited" value="UmFtcztMQUIzMTRDMTM7MjAxOS0xMi0wNDswMTo0Mjo1NSBBTTsxOzIzMDI="/>
+        <attribute name="edited" value="QnJ5YW4gSmFtZXM7TEFQVE9QLUJDS1NNTlBTOzIwMjAtMDEtMjM7MTE6MTE6MzEgUE07MztSYW1zO0xBQjMxNEMxMjsyMDIwLTAxLTA3OzA5OjM4OjE2IEFNOzIuIEJpcnRoZGF5KDEpLmZwcmc7NzM5OA=="/>
+        <attribute name="edited" value="QnJ5YW4gSmFtZXM7TEFQVE9QLUJDS1NNTlBTOzIwMjAtMDEtMjM7MTE6MTQ6MTMgUE07MjszNTI4"/>
+        <attribute name="edited" value="TmFtZTtMQVBUT1AtUjI2SDhQRk47MjAyMC0wMS0yMzsxMTozNToxNCBQTTsxOzI4MTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Discount Calculator&quot;" newline="True"/>
+            <output expression="&quot;Bacarro, Gregorio, Padua&quot;" newline="True"/>
+            <output expression="&quot;This program will help you compute the amount of a certain discount from a specific price. So you'll ahve a better shopping experience.&quot;" newline="True"/>
+            <declare name="OriginalPrice" type="Real" array="False" size=""/>
+            <declare name="Discount" type="Real" array="False" size=""/>
+            <declare name="Rate" type="Real" array="False" size=""/>
+            <declare name="ExitCode" type="Boolean" array="False" size=""/>
+            <assign variable="ExitCode" expression="True"/>
+            <while expression="ExitCode == True">
+                <output expression="&quot;State the Original Price&quot;" newline="True"/>
+                <input variable="OriginalPrice"/>
+                <output expression="&quot;How many percent is the discount?&quot;" newline="True"/>
+                <input variable="Rate"/>
+                <assign variable="Discount" expression="Rate / 100"/>
+                <declare name="Less" type="Real" array="False" size=""/>
+                <declare name="Payable" type="Integer" array="False" size=""/>
+                <assign variable="Less" expression="OriginalPrice * Discount"/>
+                <assign variable="Payable" expression="OriginalPrice - Less"/>
+                <output expression="&quot;The discounted price will be &quot; &amp; Payable" newline="True"/>
+                <output expression="&quot;Would you try again? :)&quot;" newline="True"/>
+                <output expression="&quot;Yes or No?&quot;" newline="True"/>
+                <declare name="D" type="String" array="False" size=""/>
+                <input variable="D"/>
+                <if expression="D = &quot;Yes&quot;">
+                    <then/>
+                    <else>
+                        <breakpoint/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Nice working with you :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
